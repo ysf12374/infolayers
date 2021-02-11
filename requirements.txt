@@ -1,0 +1,4 @@
+-r planetstore/requirements.txt
+-r planetclient/requirements.txt
+-r scrapedata/requirements.txt
+-r xdsl/requirements.txt

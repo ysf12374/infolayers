@@ -1,0 +1,33 @@
+<section class="section">
+  <div class="columns is-mobile is-centered">
+    <div v-for="page in $root.menu" class="column is-one-quarter">
+      <div class="tile">
+        <!-- Add content or other tiles -->
+        <div class="card">
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                  <span style="font-size: 40px; color: Dodgerblue;">
+                    <i :class="page.iconClass"></i>
+                  </span>
+                </div>
+                <div class="media-content">
+                  <p class="title is-4">{{page.title}}</p>
+                  <p class="subtitle is-6">{{page.subtitle}}</p>
+                </div>
+              </div>
+              <div class="content"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+                <div class="tags">
+                  <span v-for="tag in page.tags" class="tag">#{{tag}}</span>
+                </div>
+                <!-- <br> <small>11:09 PM - 1 Jan 2016</small> </div> -->
+            </div>
+            <footer class="card-footer">
+              <a class="card-footer-item" :href="'../maps/'+page.page">Go!</a>
+            </footer>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>

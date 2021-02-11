@@ -1,0 +1,36 @@
+<div>
+    <div class="columns is-fullheight">
+        <div class="column is-1 is-sidebar-menu">
+            <aside class="menu">
+                <p class="menu-label">
+                  Maps
+                </p>
+                <ul class="menu-list">
+                    <li v-for="page in $root.menu">
+                        <span style="font-size: 2em;">
+                            <a v-bind:class="{ 'is-active': (page.page==$root.page) }"
+                                v-on:click="go(page.page)"
+                            >
+                            <i :class="page.iconClass"></i>
+                          </a>
+                        </span>
+                    </li>
+                </ul>
+                <!-- <p class="menu-label">
+                  Shortcuts
+                </p>
+                <ul class="menu-list">
+                    <li>
+                        <a class="link" v-on:click="this.mapper.flyto('milano')">Milano</a>
+                    </li>
+                    <li>
+                        <a class="link" v-on:click="this.mapper.flyto('rapallo')">Rapallo</a>
+                    </li>
+                </ul> -->
+            </aside>
+        </div>
+        <div class="column is-main-content">
+            <mapper></mapper>
+        </div>
+    </div>
+</div>
